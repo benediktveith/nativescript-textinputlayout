@@ -1,28 +1,26 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Dependency directory
-src/node_modules
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
-# Compiled JS files and their .map files
+.vscode
+.idea
+.DS_Store
+*.esm.json
+*.js
 *.js.map
-
-# Demo
-demo/app/*.js
+*.log
+src/*.d.ts
+!src/index.d.ts
+!src/references.d.ts
+!src/scripts/*.js
+!seed-tests/*.js
+seed-tests/seed-copy/**/*.*
+seed-tests/seed-copy-new-git-repo/**/*.*
+!demo/karma.conf.js
+!demo/app/tests/*.js
 demo/*.d.ts
-demo/*.js.map
+!demo/references.d.ts
+demo/lib
 demo/platforms
-demo/node_modules
-demo/hooks
-
-# IDEs
-.vscode/
-.idea/
+node_modules
+publish/src
+publish/package
+demo/report/report.html
+demo/report/stats.json
+!demo-vue/app/app.js
