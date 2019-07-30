@@ -26,6 +26,17 @@ import { View, booleanConverter } from "tns-core-modules/ui/core/view";
 import { TextView } from 'tns-core-modules/ui/text-view';
 import { TextField } from 'tns-core-modules/ui/text-field';
 
+const textinputlayoutNamespace = (useAndroidX()) ? com.google.android.material.textfield : android.support.design.widget;
+
+function useAndroidX() {
+  return (
+    global.androidx &&
+    com.google &&
+    com.google.android &&
+    com.google.android.material
+  );
+}
+
 function getStyleResourceId(context: any, name: string) {
     if (!context || (name || '').length === 0) {
         return null;
@@ -55,7 +66,7 @@ export const errorEnabledProperty = new Property<TextInputLayout, boolean>({
 });
 
 export class TextInputLayout extends CommonTextInputLayout {
-    nativeView: android.support.design.widget.TextInputLayout;
+    nativeView: textinputlayoutNamespace.TextInputLayout;
 
     private _textField: TextField | TextView;
 
@@ -97,7 +108,7 @@ export class TextInputLayout extends CommonTextInputLayout {
     }
 
     public createNativeView() {
-        return new android.support.design.widget.TextInputLayout(this._context);
+        return new textinputlayoutNamespace.TextInputLayout(this._context);
     }
 
     public onLoaded(): void {

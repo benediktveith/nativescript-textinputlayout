@@ -4,11 +4,20 @@ var textInputLayout_common_1 = require("./textInputLayout.common");
 var view_1 = require("tns-core-modules/ui/core/view");
 var text_view_1 = require("tns-core-modules/ui/text-view");
 var text_field_1 = require("tns-core-modules/ui/text-field");
+var textinputlayoutNamespace = (useAndroidX()) ? com.google.android.material.textfield : android.support.design.widget;
 function getStyleResourceId(context, name) {
     if (!context || (name || '').length === 0) {
         return null;
     }
     return context.getResources().getIdentifier(name, 'style', context.getPackageName());
+}
+function useAndroidX() {
+  return (
+    global.androidx &&
+    com.google &&
+    com.google.android &&
+    com.google.android.material
+  );
 }
 exports.hintAnimationEnabledProperty = new textInputLayout_common_1.Property({
     name: "hintAnimationEnabled", valueConverter: view_1.booleanConverter
@@ -65,7 +74,7 @@ var TextInputLayout = (function (_super) {
         }
     };
     TextInputLayout.prototype.createNativeView = function () {
-        return new android.support.design.widget.TextInputLayout(this._context);
+        return new textinputlayoutNamespace.TextInputLayout(this._context);
     };
     TextInputLayout.prototype.onLoaded = function () {
         _super.prototype.onLoaded.call(this);
