@@ -1,13 +1,13 @@
 {
   "name": "nativescript-textinputlayout",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A NativeScript plugin to provide an XML widget to implement the Material Design TextInputLayout.",
   "main": "textInputLayout",
   "typings": "textInputLayout.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "4.0.0",
-      "ios": "4.0.1"
+      "android": "6.0.0",
+      "ios": "6.0.1"
     }
   },
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradleygore/nativescript-textinputlayout"
+    "url": "https://github.com/benediktveith/nativescript-textinputlayout"
   },
   "keywords": [
     "NativeScript",
@@ -32,13 +32,13 @@
     "android",
     "TextInputLayout",
     "Material Design",
-    "bradleygore"
+    "benediktveith"
   ],
   "contributors": [],
-  "author": "Bradley Gore <bradley@bradleygore.com> (https://github.com/bradleygore)",
+  "author": "Benedikt Veith <benedikt.veith@scherer-software.de> (https://github.com/benediktveith)",
   "license": "MIT",
-  "bugs": "https://github.com/bradleygore/nativescript-textinputlayout/issues",
-  "homepage": "https://github.com/bradleygore/nativescript-textinputlayout",
+  "bugs": "https://github.com/benediktveith/nativescript-textinputlayout/issues",
+  "homepage": "https://github.com/benediktveith/nativescript-textinputlayout",
   "readmeFilename": "README.md",
   "readme": "../README.md",
   "devDependencies": {
